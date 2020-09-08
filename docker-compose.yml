@@ -1,0 +1,17 @@
+version: '2'
+services:
+  elasticsearch:
+    build: ./elasticsearch
+    environment:
+      - discovery.type=single-node
+    ports:
+      - 9200:9200
+    volumes:
+      - ./elasticsearch-data:/usr/share/elasticsearch/data
+  grafana:
+    image: grafana/grafana:7.1.5
+    ports:
+      - 443:3000
+      - 80:3000
+    volumes:
+      - ./grafana-data:/var/lib/grafana
