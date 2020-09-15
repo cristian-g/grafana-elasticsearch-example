@@ -9,5 +9,3 @@ services:
         ES_JAVA_OPTS: -Xms512m -Xmx512m
     ports:
       - 9200:9200
-    volumes:
-      - ./elasticsearch-data:/usr/share/elasticsearch/data
