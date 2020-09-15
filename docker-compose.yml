@@ -9,11 +9,3 @@ services:
       - 9200:9200
     volumes:
       - ./elasticsearch-data:/usr/share/elasticsearch/data
-  grafana:
-    image: grafana/grafana:7.1.5
-    user: "$UID:$GID"
-    ports:
-      - 443:3000
-      - 80:3000
-    volumes:
-      - ./grafana-data:/var/lib/grafana
