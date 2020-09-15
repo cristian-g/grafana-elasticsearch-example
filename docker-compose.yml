@@ -2,7 +2,6 @@ version: '2'
 services:
   elasticsearch:
     build: ./elasticsearch-docker
-    user: "$UID:$GID"
     environment:
         http.host: 0.0.0.0
         transport.host: 127.0.0.1
